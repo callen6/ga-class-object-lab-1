@@ -17,15 +17,35 @@ class Car
 	end
 end
 
-class Ferrari
+class Ferrari < Car
 
 	def initialize(max_speed)
 		@max_speed = max_speed
 	end
 end
 
-class Saab
+class Saab < Car
 	def initialize(color)
 		@color = color
+
 	end
 end
+
+# c1 = Car.new(90, 'royal blue', 'leather')
+c2 = Car.new(115, 'candy apple', 'cloth')
+
+f1 = Ferrari.new(120)
+f2 = Ferrari.new(240)
+
+s1 = Saab.new('grey')
+s2 = Saab.new('red')
+
+# puts c1.color
+puts c2.seating_material
+puts "\n"
+puts f1.max_speed
+puts f2.max_speed
+puts "\n"
+puts s1.color
+puts s1.seating_material # should inherit from Car class--self? super?
+puts s1.max_speed
