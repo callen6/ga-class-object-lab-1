@@ -15,6 +15,14 @@ class Car
 		@color = color
 		@seating_material = seating
 	end
+
+	def speeding_ticket
+		if @color == 'red'
+			puts "you got a speeding ticket"
+		else
+			puts "you're good to go"
+		end
+	end
 end
 
 class Ferrari < Car
@@ -27,7 +35,6 @@ end
 class Saab < Car
 	def initialize(color)
 		@color = color
-
 	end
 end
 
@@ -41,11 +48,14 @@ s1 = Saab.new('grey')
 s2 = Saab.new('red')
 
 # puts c1.color
-puts c2.seating_material
-puts "\n"
-puts f1.max_speed
-puts f2.max_speed
-puts "\n"
-puts s1.color
-puts s1.seating_material # should inherit from Car class--self? super?
-puts s1.max_speed
+p c2.seating_material
+p f1.max_speed
+p f2.max_speed
+p s1.color
+p s1.speeding_ticket
+p s2.speeding_ticket
+
+
+
+
+
